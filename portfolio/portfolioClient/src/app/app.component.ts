@@ -1,14 +1,13 @@
 import { Component } from "@angular/core";
-import {FormsModule} from "@angular/forms";
+import {HeaderComponent} from './header/header.component';
+import {HomeComponent} from './home/home.component';
+import {FooterComponent} from './footer/footer.component';
      
 @Component({
     selector: "my-app",
-    standalone: true,
-    imports: [FormsModule],
-    template: `<label>Введите имя:</label>
-                 <input [(ngModel)]="name" placeholder="name">
-                 <h1>Добро пожаловать {{name}}!</h1>`
+    imports: [HeaderComponent, HomeComponent, FooterComponent],
+    templateUrl: './app.component.html',
 })
 export class AppComponent { 
-    name= "";
+    
 }

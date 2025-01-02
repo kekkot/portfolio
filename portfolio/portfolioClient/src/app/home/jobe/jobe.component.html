@@ -1,0 +1,19 @@
+<div class="mt-12 flex" *ngFor="let job of Jobs">
+  <p class="w-1/5 mr-4">{{job.date}}</p>
+  <div class="w-4/5">
+    <h2><a href={{job.linkCompany}} target="_blank">{{job.company}}</a></h2>
+    <h3>Разработчик ПО</h3>
+    <div class="my-4">
+      FrontEnd обязанности:
+      {{job.frontDuties}}
+    </div>
+    <div class="my-4">
+      BackEnd обязанности:
+      {{job.backDuties}}
+
+    </div>
+    <ul class="my-2 flex flex-wrap">
+      <li class="mr-1.5 my-2 flex items-center rounded-full bg-black px-3 py-1 text-xs font-bold leading-5 text-white " *ngFor="let stack of job.stackTech">{{stack}}</li>
+    </ul>
+  </div>
+</div>
