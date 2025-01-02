@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'jobe-comp',
+  imports: [NgFor],
   templateUrl: './jobe.component.html',
   styleUrls: ['./jobe.component.css']
 })
