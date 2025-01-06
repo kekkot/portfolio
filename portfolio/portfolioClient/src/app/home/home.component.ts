@@ -1,12 +1,10 @@
-import { Component } from '@angular/core';
-import {ObsNavComponent} from './obs-nav/obs-nav.component';
-import {JobeComponent} from './jobe/jobe.component';
-
+import { Component } from "@angular/core";
+     
 @Component({
-  selector: 'main',
-  imports: [ObsNavComponent, JobeComponent],
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+    selector: "home",
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent { 
+    
 }

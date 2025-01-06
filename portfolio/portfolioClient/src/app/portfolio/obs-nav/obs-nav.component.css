@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 16px;
     list-style-type: none;
+    padding: 0;
 }
 .obs-nav__link{
     display: flex;

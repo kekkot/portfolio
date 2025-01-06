@@ -1,3 +1,8 @@
+:host{
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
 .container{
     padding: 0 72px;
     display: flex;
@@ -19,6 +24,8 @@
 .header__link{
     position: relative;
     cursor: pointer;
+    color: black;
+    text-decoration: none;
 }
 .header__link:after{    
     content: '';
