@@ -12,6 +12,7 @@
               "outputPath": "dist/portfolio",
               "index": "src/index.html",
               "main": "src/main.ts",
+              "assets": ["src/assets"],
               "polyfills": ["zone.js"],
               "tsConfig": "tsconfig.json",
               "aot": true
