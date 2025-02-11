@@ -27,24 +27,24 @@ namespace portfolioServ
 
             app.UseAuthorization();
 
-            var summaries = new[]
-            {
-                "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-            };
+            string api = "d66e7383458df29e206c737bffcfd9414f0e0a9824d4a144c5f27fabb38cdb37";
+            string id = "675924a1bcdc0f36f2c3c676";
 
-            app.MapGet("/weatherforecast", (HttpContext httpContext) =>
+            HttpClient client = new HttpClient();
+
+            client.DefaultRequestHeaders.Add("Authorization", $"Bearer {api}");
+
+            app.MapGet("/getWebflowCollection", async (HttpContext httpContext) =>
             {
-                var forecast = Enumerable.Range(1, 5).Select(index =>
-                    new WeatherForecast
-                    {
-                        Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                        TemperatureC = Random.Shared.Next(-20, 55),
-                        Summary = summaries[Random.Shared.Next(summaries.Length)]
-                    })
-                    .ToArray();
-                return forecast;
+                using HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, $"https://api.webflow.com/v2/collections/{id}/items");
+                
+                //using HttpResponseMessage response = await client.SendAsync(request);
+
+                using HttpResponseMessage response = await client.GetAsync($"https://api.webflow.com/v2/collections/{id}/items");
+                string content = await response.Content.ReadAsStringAsync();
+                return content;
             })
-            .WithName("GetWeatherForecast")
+            .WithName("GetWebflowCollection")
             .WithOpenApi();
 
             app.Run();
