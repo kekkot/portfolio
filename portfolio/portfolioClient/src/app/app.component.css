@@ -2,3 +2,12 @@ body{
     padding: 0;
     margin: 0;
 }
+.row{
+    display: flex;
+    align-items: center;
+}
+.container{
+    max-width: 1440px;
+    margin: auto;
+    padding: 72px;
+}

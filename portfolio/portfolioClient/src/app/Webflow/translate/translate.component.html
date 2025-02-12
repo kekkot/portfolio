@@ -1,1 +1,14 @@
-<p>trnas</p>
+<section>
+    <div class="container">
+        <div class="row">
+            <p>Введи API Ключ</p>
+            <input type="text" value="d66e7383458df29e206c737bffcfd9414f0e0a9824d4a144c5f27fabb38cdb37">
+        </div>
+        <div class="row">
+            <p>Введи ID Коллекции</p>
+            <input type="text" value="675924a1bcdc0f36f2c3c676">
+        </div>
+        <button (click)="getCollections()">Получить коллекцию</button>
+        <p>{{str | json}}</p>
+    </div>
+</section>

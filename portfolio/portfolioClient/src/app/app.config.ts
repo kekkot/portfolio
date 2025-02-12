@@ -10,10 +10,8 @@ import { TranslateComponent } from "./Webflow/translate/translate.component";
 const appRoutes: Routes =[
     { path: "", component: HomeComponent},
     { path: "portfolio", component: PortfolioComponent},
-    { path: "webflow", component: WebflowComponent, children: [{
-        path: "translate", component: TranslateComponent
-      }]
-    },    
+    { path: "webflow", component: WebflowComponent},    
+    { path: "webflow/translate", component: TranslateComponent}
 ];
  
 export const appConfig: ApplicationConfig = {

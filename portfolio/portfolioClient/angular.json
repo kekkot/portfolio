@@ -9,6 +9,9 @@
           "build": {
             "builder": "@angular-devkit/build-angular:browser",
             "options": {
+              "sourceMap": {
+                "scripts": true
+              },
               "outputPath": "dist/portfolio",
               "index": "src/index.html",
               "main": "src/main.ts",
