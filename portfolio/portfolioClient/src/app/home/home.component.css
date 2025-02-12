@@ -1,0 +1,11 @@
+:host{
+    display: block;
+    height: 100dvh;
+
+}
+section{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
