@@ -9,7 +9,7 @@ import { CommonModule } from "@angular/common";
 export class TranslateComponent {
     str;
     async getCollections(): Promise<void> {
-        const response = await fetch("https://localhost:32771/getWebflowCollection");
+        const response = await fetch("http://localhost:32771/getWebflowCollection");
 
         /*const list = document.createElement("ul");
         response.json().then(data => {
